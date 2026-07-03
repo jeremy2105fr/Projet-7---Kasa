@@ -1,4 +1,50 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
 header {
-    color: Red;
-    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+            color: #333;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 2rem 4rem;
+
+        nav {
+
+            a {
+                font-size: 1.2rem;
+                margin: 0 1rem;
+
+
+            }
+
+            a:hover {
+                border-bottom: 1px black solid;
+
+            }
+        }
+    }
 }

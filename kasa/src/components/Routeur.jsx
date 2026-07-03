@@ -12,7 +12,7 @@ import Section from '../pages/Section.jsx'
 import Footer from '../pages/Footer/Footer.jsx'
 
 // Page d'Erreur P 404 - Toujour en dernier chemin -  Doit ramener sur cette page si chemin incorrect
-import Erreur from '../pages/Erreur/Erreur.jsx'
+import Erreur from './Erreur/Erreur.jsx'
 
 
 // Si définie après <Router> s'affichera toujours

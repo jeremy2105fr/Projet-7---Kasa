@@ -2,7 +2,10 @@ import { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
-//import './Header.css'
+
+
+//importation images
+import Logo from '../../style/assets/logos/logo.png'
 
 function Header() {
   
@@ -10,12 +13,12 @@ function Header() {
     <>
       <header>
         <div className='KasaLogo'>
-          <h1>Kasa</h1>
+          <img src={Logo} alt="Logo Kasa" />
         </div>
         
        <nav>
-          <Link to=" /">Acceuil</Link>
-          <Link to=" /">A propos</Link>
+          <Link classname='navbar_link' to=" /">Acceuil</Link>
+          <Link classname='navbar_link' to=" /">A propos</Link>
        </nav>
       </header>
     </>
