@@ -11,7 +11,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2% 5% 0 5%;
-    width: 85%;
+    min-width: 335px;
+    height: 46.88px;
     background-color: white;
 
 
@@ -21,7 +22,14 @@ header {
     .KasaLogo {
         // DevMode
         //border: 1px orange solid;
-        margin-bottom: 1rem;
+        max-width: 33%;
+        height: 100%;
+        margin-bottom: 8px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     nav {
@@ -38,7 +46,7 @@ header {
             margin: 0 0.5rem;
             text-decoration: none;
             color: #333;
-            font-size: 1.1em;
+            font-size: 0.98em;
         }
 
         a:hover {
