@@ -1,75 +1,67 @@
-// Variables
-
-// Fonction / Mixin
-
-
 // Version Tablette
 $breakpoint-tablet: 768px;
 // Version Ordinateur
 $breakpoint-desktop: 1024px;
 
+
+
 header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 2% 5% 0 5%;
+    width: 85%;
+    background-color: white;
 
-    width: 480px;
+
+    // DevMode
+    //border: 1px rgb(192, 20, 129) solid;
 
     .KasaLogo {
+        // DevMode
+        //border: 1px orange solid;
         margin-bottom: 1rem;
     }
 
     nav {
-        width: 55%;
+        // DevMode
+        // border: 1px black solid;
 
+        width: 45%;
         display: flex;
         flex-direction: row;
-
-        justify-content: space-around;
+        justify-content: flex-end;
+        gap: 3%;
 
         a {
             margin: 0 0.5rem;
             text-decoration: none;
             color: #333;
-            font-size: 3em;
+            font-size: 1.1em;
         }
 
         a:hover {
             border-bottom: 1px black solid;
         }
     }
+}
 
-    // Tablette
-    @media (min-width: $breakpoint-tablet) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+@media (min-width: $breakpoint-tablet) {
 
-        width: 768px;
-
-        .logo {
-            margin-bottom: 0;
-        }
-    }
-
-    // Ordinateur
-    @media (min-width: $breakpoint-desktop) {
-
-        width: 1024px;
-
-        padding: 2rem 4rem;
+    header {
+        width: 98%;
+        justify-content: space-around;
+        gap: 30%;
+        padding: 2% 0% 0 2%;
 
         nav {
-
-            width: 20%;
-
-            justify-content: space-between;
+            width: 35%;
 
             a {
-                font-size: 1.2rem;
-                margin: 0 1rem;
+                font-size: 1.3em;
             }
         }
+
     }
 }
