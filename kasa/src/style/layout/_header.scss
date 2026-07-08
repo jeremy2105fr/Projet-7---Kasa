@@ -1,49 +1,74 @@
+// Variables
+
+// Fonction / Mixin
+
+
+// Version Tablette
 $breakpoint-tablet: 768px;
+// Version Ordinateur
 $breakpoint-desktop: 1024px;
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 1rem;
 
-    .logo {
+    width: 480px;
+
+    .KasaLogo {
         margin-bottom: 1rem;
     }
 
     nav {
+        width: 55%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+
         a {
             margin: 0 0.5rem;
             text-decoration: none;
             color: #333;
+            font-size: 3em;
+        }
+
+        a:hover {
+            border-bottom: 1px black solid;
         }
     }
 
+    // Tablette
     @media (min-width: $breakpoint-tablet) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        width: 768px;
 
         .logo {
             margin-bottom: 0;
         }
     }
 
+    // Ordinateur
     @media (min-width: $breakpoint-desktop) {
+
+        width: 1024px;
+
         padding: 2rem 4rem;
 
         nav {
 
+            width: 20%;
+
+            justify-content: space-between;
+
             a {
                 font-size: 1.2rem;
                 margin: 0 1rem;
-
-
-            }
-
-            a:hover {
-                border-bottom: 1px black solid;
-
             }
         }
     }

@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 //importe le style
+import 'normalize.css';
 import '../src/style/main.scss'
 
 // Importe le router
