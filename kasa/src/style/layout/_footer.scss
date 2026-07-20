@@ -1,3 +1,6 @@
+// Version Tablette
+$breakpoint-tablet: 768px;
+
 footer {
     background-color: black;
     color: white;
@@ -15,7 +18,21 @@ footer {
         flex-direction: column;
 
         width: 35%;
-        height: 28%;
-        //border: 1px red solid;
+        height: 23%;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        .signature {
+            width: 40%;
+            height: 30%;
+
+            p {
+                font-size: 24px;
+            }
+        }
     }
 }
