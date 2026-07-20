@@ -1,8 +1,5 @@
 import { useState } from 'react'
-
 import { Link } from 'react-router-dom'
-
-
 
 //importation images
 import Logo from '../../style/assets/logos/logo.png'
