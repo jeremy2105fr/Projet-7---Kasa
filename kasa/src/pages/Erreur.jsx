@@ -1,6 +1,5 @@
 import { useState } from 'react'
 // Importation des composant
-//importation des composants'
 import Header from '../components/Header.jsx'
 
 import Baniere from '../components/Baniere.jsx'

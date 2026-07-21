@@ -39,7 +39,7 @@ section {
 
 @media (min-width: $breakpoint-tablet) {
     section {
-        padding: 10px 3% 10px 3%;
+        padding: 10px 0 10px 8%;
         grid-template-columns: 0.45fr 0.45fr;
         grid-template-rows: 255px 255px 255px;
     }

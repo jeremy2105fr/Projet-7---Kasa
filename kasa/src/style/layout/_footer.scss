@@ -1,5 +1,5 @@
-// Version Tablette
-$breakpoint-tablet: 768px;
+// Version Ordinateur
+$breakpoint-desktop: 1024px;
 
 footer {
     background-color: black;
@@ -25,9 +25,9 @@ footer {
         }
     }
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-desktop) {
         .signature {
-            width: 40%;
+            width: 43%;
             height: 30%;
 
             p {

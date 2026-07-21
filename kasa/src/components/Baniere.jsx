@@ -1,11 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-//importation images
-//import BaniereImage from '../../style/assets/logos/baniere.png'
-
 function Baniere() {
-  
   return (
     <>
      <div className="BaniereBoite">
