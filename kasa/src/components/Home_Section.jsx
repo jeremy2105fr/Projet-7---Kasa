@@ -5,7 +5,24 @@ import { Link } from 'react-router-dom'
 function Home_Section() {
   return (
     <section>
-      <h1>Home Section</h1>
+      <div className="BoiteLocation">
+        <Link classname='Location_link' to=" /">Titre de la location</Link>
+      </div>
+      <div className="BoiteLocation">
+        <Link classname='Location_link' to=" /">Titre de la location</Link>
+      </div>
+      <div className="BoiteLocation">
+        <Link classname='Location_link' to=" /">Titre de la location</Link>
+      </div>
+      <div className="BoiteLocation">
+        <Link classname='Location_link' to=" /">Titre de la location</Link>
+      </div>
+      <div className="BoiteLocation">
+        <Link classname='Location_link' to=" /">Titre de la location</Link>
+      </div>
+      <div className="BoiteLocation">
+        <Link classname='Location_link' to=" /">Titre de la location</Link>
+      </div>
     </section>
   )
 }

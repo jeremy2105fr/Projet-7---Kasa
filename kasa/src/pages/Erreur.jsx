@@ -2,9 +2,9 @@ import { useState } from 'react'
 // Importation des composant
 //importation des composants'
 import Header from '../components/Header.jsx'
-import Footer from '../components/Footer.jsx'
-import Baniere from '../components/Baniere.jsx'
 
+import Baniere from '../components/Baniere.jsx'
+import Footer from '../components/Footer.jsx'
 
 function Erreur() {
   

@@ -6,8 +6,11 @@ import { useNavigate } from 'react-router-dom'
 
 //importation des composants'
 import Header from '../components/Header.jsx'
-import Footer from '../components/Footer.jsx'
 import Baniere from '../components/Baniere.jsx'
+import Home_Section from '../components/Home_Section.jsx'
+import Footer from '../components/Footer.jsx'
+
+
 
 function Section() {
   const navigate = useNavigate();
@@ -15,7 +18,7 @@ function Section() {
     <>
       <Header />
       <Baniere />
-      <h1>je suis la page principal</h1>
+      <Home_Section />
       <Footer />
     </>
   )

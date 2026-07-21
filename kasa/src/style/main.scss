@@ -8,7 +8,9 @@
 
 // Partie Baniere
 @use './layout/_baniere.scss';
+
 // Partie Principales
+@use './pages/_home.scss';
 
 // Partie Footer
 @use './layout/_footer.scss'
