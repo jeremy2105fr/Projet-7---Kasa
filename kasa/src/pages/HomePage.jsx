@@ -4,18 +4,19 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
-//import './Section.css'
-
-
-// importer le header , la baniere et footer
+//importation des composants'
+import Header from '../components/Header.jsx'
+import Footer from '../components/Footer.jsx'
+import Baniere from '../components/Baniere.jsx'
 
 function Section() {
   const navigate = useNavigate();
   return (
     <>
-
-     <h1>je suis la page principal</h1>
-    
+      <Header />
+      <Baniere />
+      <h1>je suis la page principal</h1>
+      <Footer />
     </>
   )
 }
