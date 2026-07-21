@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // Importation des composant
 import Header from '../components/Header.jsx'
-
+import ErreurSection from '../components/Erreur_Section.jsx'
 import Baniere from '../components/Baniere.jsx'
 import Footer from '../components/Footer.jsx'
 
@@ -11,8 +11,7 @@ function Erreur() {
     <>
       <Header />
       <Baniere />
-     <h1>404 - Page non trouvé</h1>
-     <p>La page que vous demander n'existe pas / ou plus</p>
+      <ErreurSection />
       <Footer />
     </>
   )

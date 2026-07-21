@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Home_Section() {
   return (
-    <section>
+    <section className='HomeSection'>
       <div className="BoiteLocation">
         <Link classname='Location_link' to=" /">Titre de la location</Link>
       </div>

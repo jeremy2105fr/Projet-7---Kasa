@@ -1,0 +1,56 @@
+// Version Tablette
+$breakpoint-tablet: 768px;
+
+.SectionErreur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 450px;
+
+    img {
+        width: 45%;
+    }
+
+    .TexteErrata {
+        width: 260px;
+        height: 56px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        gap: 0;
+
+        p {
+            color: #FF6060;
+            font-size: 18px;
+            margin: 1px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        border-bottom: 1px black solid;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .SectionErreur {
+        img {
+            width: 60%;
+        }
+
+        .TexteErrata {
+            width: 100%;
+            flex-direction: row;
+            gap: 3px;
+        }
+    }
+}
