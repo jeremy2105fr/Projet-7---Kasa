@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate, Form } from 'react
 import Header from '../pages/Header/Header.jsx'
 import Section from '../pages/Section.jsx'
 import Footer from '../pages/Footer/Footer.jsx'
+import Baniere from './baniere.jsx'
 
 // Page d'Erreur P 404 - Toujour en dernier chemin -  Doit ramener sur cette page si chemin incorrect
 import Erreur from './Erreur/Erreur.jsx'
@@ -22,7 +23,7 @@ function Routeur() {
     <Router>
 
         <Header />
-        
+        <Baniere />
         <Section />
 
             <Routes>

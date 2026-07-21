@@ -2,14 +2,17 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 //importation images
-import BaniereImage from '../../style/assets/logos/baniere.png'
+//import BaniereImage from '../../style/assets/logos/baniere.png'
 
 function Baniere() {
   
   return (
     <>
-     <div className="baniereBoite">
-        <h1> Chez vous, partout et ailleurs</h1>
+     <div className="BaniereBoite">
+        <div className="titre">
+            <p>Chez vous,</p> 
+            <p>partout et ailleurs</p>
+        </div>
      </div>
     </>
   )
