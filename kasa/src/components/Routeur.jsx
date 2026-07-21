@@ -1,19 +1,14 @@
 // Défini le router à partir de BrowserRouter de 'react-router-dom'
-import { BrowserRouter as Router, Routes, Route, useNavigate, Form } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// A supprimer ? 
-
-
-
- 
 // Importer les différente pages
-import Header from '../pages/Header/Header.jsx'
-import Section from '../pages/Section.jsx'
-import Footer from '../pages/Footer/Footer.jsx'
-import Baniere from './baniere.jsx'
+import Header from '../components/Header.jsx'
+import HomePage from '../pages/HomePage.jsx'
+import Footer from '../components/Footer.jsx'
+import Baniere from './Baniere.jsx'
 
 // Page d'Erreur P 404 - Toujour en dernier chemin -  Doit ramener sur cette page si chemin incorrect
-import Erreur from './Erreur/Erreur.jsx'
+import Erreur from '../pages/Erreur.jsx'
 
 
 // Si définie après <Router> s'affichera toujours
@@ -21,18 +16,15 @@ import Erreur from './Erreur/Erreur.jsx'
 function Routeur() {
   return (
     <Router>
+      <Header />
+      <Baniere />
 
-        <Header />
-        <Baniere />
-        <Section />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<Erreur />} />
+      </Routes>
 
-            <Routes>
-                
-                
-                <Route path="/" element={<Erreur />} />
-            </Routes>
-
-            <Footer />
+      <Footer />
     </Router>
   )
 }

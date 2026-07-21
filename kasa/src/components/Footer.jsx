@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 //importation images
-import LogoFooter from '../../style/assets/logos/logo_footer.png'
+import LogoFooter from '../style/assets/logos/logo_footer.png'
 
 function Footer() {
   
