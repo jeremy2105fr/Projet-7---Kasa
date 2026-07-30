@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // Importer les différente pages
 import HomePage from '../pages/HomePage.jsx'
 import ProposPage from '../pages/ProposPage.jsx'
+import LogementPage from '../pages/LogementPage.jsx'
 
 // Page d'Erreur P 404 - Toujour en dernier chemin -  Doit ramener sur cette page si chemin incorrect
 import Erreur from '../pages/Erreur.jsx'
@@ -18,6 +19,8 @@ function Routeur() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/a-propos" element={<ProposPage />} />
+        <Route path="/logement" element={<LogementPage/>} />
+        
         <Route path="*" element={<Erreur />} />
       </Routes>
 
