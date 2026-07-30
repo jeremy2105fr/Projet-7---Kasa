@@ -14,7 +14,7 @@ function Header() {
         </div>
         
       <nav>
-          <Link classname='navbar_link' to=" /">Acceuil</Link>
+          <Link classname='navbar_link' to="/">Acceuil</Link>
           <Link classname='navbar_link' to=" /">A propos</Link>
       </nav>
       </header>

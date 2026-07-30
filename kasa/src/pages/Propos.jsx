@@ -4,19 +4,19 @@ import { useNavigate } from 'react-router-dom'
 //importation des composants'
 import Header from '../components/Header.jsx'
 import Baniere from '../components/Baniere.jsx'
-import Home_Section from '../components/Home_Section.jsx'
+import Propos_Section from '../components/Propos_Section.jsx'
 import Footer from '../components/Footer.jsx'
 
-function Section() {
+function Propos() {
   const navigate = useNavigate();
   return (
     <>
       <Header />
       <Baniere />
-      <Home_Section />
+      <Propos_Section />
       <Footer />
     </>
   )
 }
 
-export default Section
+export default Propos
