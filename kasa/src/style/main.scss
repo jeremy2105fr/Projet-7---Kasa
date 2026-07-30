@@ -10,9 +10,9 @@
 @use './layout/_baniere.scss';
 
 // Partie Principales
-@use './pages/_home.scss';
-
-@use './pages/_erreur.scss';
+@use './pages/__home.scss';
+@use './pages/__propos.scss';
+@use './pages/__erreur.scss';
 
 // Partie Footer
 @use './layout/_footer.scss';
