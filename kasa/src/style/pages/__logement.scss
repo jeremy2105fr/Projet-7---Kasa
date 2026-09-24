@@ -1,0 +1,336 @@
+// Version Tablette
+$breakpoint-tablet: 768px;
+// Version Ordinateur
+$breakpoint-desktop: 1024px;
+
+.LogementSection {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    margin: 20px 0 20px 0;
+
+    background-color: white;
+
+    #Caroussel {
+        width: 80%;
+        height: 513px;
+        position: relative;
+
+        #FondCaroussel {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+
+            img {
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .MenuFleche {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            inset: 0;
+
+            display: flex;
+            justify-content: center;
+            gap: 80%;
+            align-items: center;
+
+            &:hover {
+                background-color: rgba(199, 199, 199, 0.07);
+            }
+
+            a {
+                width: 64px;
+                height: 34px;
+                //border: 2px solid pink;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                z-index: 3;
+
+                &:hover {
+                    width: 68px;
+                    height: 38px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+
+                #FlecheGauche {
+                    transform: rotate(-90deg);
+
+                }
+
+                #FlecheDroite {
+                    transform: rotate(90deg);
+                }
+
+            }
+
+
+        }
+    }
+
+    .LogementDescription {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 15px;
+        margin-top: 15px;
+
+        .LogementInfoConteneur {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+            .Logement {
+                width: 80%;
+
+                #NomLogement,
+                #InfosLogement {
+                    width: 100%;
+                }
+
+                #NomLogement {
+                    height: 93px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .Localisation1,
+                    .Localisation2 {
+                        color: #FF6060;
+                        font-weight: 500;
+                        font-size: 20px;
+                        text-overflow: clip;
+                    }
+
+                    .Localisation2 {
+                        display: none;
+                        width: 0;
+                        height: 0;
+                    }
+
+                    #LocalisationBref {
+                        margin-top: 8px;
+                        font-size: 22px;
+                    }
+
+                }
+
+                #InfosLogement {
+                    margin-top: 10px;
+
+                    #Tags {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: left;
+                        gap: 20px;
+
+                    }
+
+                    .TagBox {
+                        background-color: #FF6060;
+                        color: white;
+                        border-radius: 15px;
+                        width: 100px;
+                        height: 22px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p {
+                            text-align: center;
+                            font-weight: 700;
+                            font-size: 14px;
+                        }
+
+                    }
+                }
+            }
+
+            #InfoNote {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+
+                .BoiteEtoile {
+                    width: 130px;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .etoile {
+                        width: 24px;
+                        height: 24px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            display: block;
+                        }
+                    }
+                }
+
+                .Equipe {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 35%;
+
+                    .Personnel {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: space-around;
+                        width: 93px;
+                        height: 42px;
+
+                        p {
+                            color: #FF6060;
+                            font-weight: 500;
+                            margin: 0;
+                            text-align: right;
+                        }
+                    }
+
+                    .ImageProfil {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 50%;
+
+                        background-color: #C4C4C4;
+                    }
+                }
+            }
+
+        }
+
+        .MenuInfos {
+            width: 80%;
+
+            .MenuRouge,
+            .Description {
+                width: 120%;
+            }
+
+            .Description {
+                p {
+                    margin: 10px 5px 10px 5px;
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+
+            .Descriptif-Equipement ul {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 451px) {
+
+    .LogementSection .LogementDescription .LogementInfoConteneur .Logement #NomLogement {
+        .Localisation1,
+        .Localisation2 {
+            font-size: 24px;
+        }
+
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+
+
+    .LogementSection .LogementDescription {
+
+        // Mettre les 2 element cote à cote
+        .LogementInfoConteneur {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15%;
+
+            .Logement {
+                width: 50%;
+                //height: 120px;
+
+                // Une partie du descriptif doit disparaitre
+                #NomLogement {
+                    height: 55px;
+
+                    // Masquer le texte
+                    .Localisation1 {
+                        display: none;
+                        width: 0;
+                        height: 0;
+                    }
+
+                    //Afficher le nouveau text
+                    .Localisation2 {
+                        display: block;
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+
+
+
+            // Inverser l'afichage
+            #InfoNote {
+                width: 15%;
+                flex-direction: column-reverse;
+                gap: 20px;
+
+                .Equipe {
+                    width: 100%;
+                }
+            }
+
+        }
+
+
+
+        .MenuInfos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 5%;
+
+            .MenuRouge,
+            .Description {
+                max-width: 90%;
+            }
+
+        }
+    }
+}
