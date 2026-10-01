@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+//Importation de gestion des sous-menu
 
 //importation images
 import Vector from '../style/assets/icons/Vector.png'
@@ -8,6 +9,9 @@ import EtoileActive from '../style/assets/icons/star-active.svg'
 import EtoileInactif from '../style/assets/icons/star-inactif.svg'
 
 function Logement_Section() {
+    const [descriptionOuverte, setDescriptionOuverte] = useState(false)
+    const [equipementsOuverts, setEquipementsOuverts] = useState(false)
+
   return (
     <section className='LogementSection'>
 
@@ -86,20 +90,36 @@ function Logement_Section() {
 
                     <div className="MenuRouge">
                         <p>Description</p>
-                        <img src={Vector} alt="Icone menue déroulant" />
+                        <button
+                            type="button"
+                            aria-label="Afficher ou masquer la description"
+                            aria-expanded={descriptionOuverte}
+                            aria-controls="description-logement"
+                            onClick={() => setDescriptionOuverte(!descriptionOuverte)}
+                        >
+                            <img src={Vector} alt="" />
+                        </button>
                     </div>
 
-                    <div className="Description">
+                    <div id="description-logement" className={`Description ${descriptionOuverte ? 'Ouvert' : 'Ferme'}`}>
                         <p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 ligne de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
                     </div>
                 </div>
 
-                <div className="Descriptif-Equipement Deroulement">
+                <div className="Descriptif-Equipement Deroulement ">
                     <div className="MenuRouge">
                         <p>Équipements</p>
-                        <img src={Vector} alt="Icone menue déroulant" />
+                        <button
+                            type="button"
+                            aria-label="Afficher ou masquer les équipements"
+                            aria-expanded={equipementsOuverts}
+                            aria-controls="equipements-logement"
+                            onClick={() => setEquipementsOuverts(!equipementsOuverts)}
+                        >
+                            <img src={Vector} alt="" />
+                        </button>
                     </div>
-                    <div className="Description">
+                    <div id="equipements-logement" className={`Description ${equipementsOuverts ? 'Ouvert' : 'Ferme'}`}>
                         <ul>
                             <li>Climatisation</li>
                             <li>Wi-Fi</li>

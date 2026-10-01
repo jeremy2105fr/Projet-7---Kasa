@@ -91,6 +91,7 @@ $breakpoint-desktop: 1024px;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        width: 100%;
         gap: 15px;
         margin-top: 15px;
 
@@ -203,7 +204,7 @@ $breakpoint-desktop: 1024px;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    width: 35%;
+                    //width: 35%;
 
                     .Personnel {
                         display: flex;
@@ -236,9 +237,13 @@ $breakpoint-desktop: 1024px;
         .MenuInfos {
             width: 80%;
 
-            .MenuRouge,
+            .Deroulement {
+                width: 100%;
+            }
+
+
             .Description {
-                width: 120%;
+                width: 60%;
             }
 
             .Description {
@@ -259,6 +264,7 @@ $breakpoint-desktop: 1024px;
 @media (min-width: 451px) {
 
     .LogementSection .LogementDescription .LogementInfoConteneur .Logement #NomLogement {
+
         .Localisation1,
         .Localisation2 {
             font-size: 24px;
@@ -286,6 +292,7 @@ $breakpoint-desktop: 1024px;
                 // Une partie du descriptif doit disparaitre
                 #NomLogement {
                     height: 55px;
+                    margin-bottom: 50px;
 
                     // Masquer le texte
                     .Localisation1 {
@@ -311,9 +318,6 @@ $breakpoint-desktop: 1024px;
                 flex-direction: column-reverse;
                 gap: 20px;
 
-                .Equipe {
-                    width: 100%;
-                }
             }
 
         }
