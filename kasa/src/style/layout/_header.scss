@@ -13,12 +13,8 @@ header {
     background-color: white;
 
 
-    // DevMode
-    //border: 1px rgb(192, 20, 129) solid;
-
     .KasaLogo {
-        // DevMode
-        //border: 1px orange solid;
+
         max-width: 33%;
         height: 100%;
         margin-bottom: 8px;
@@ -30,8 +26,6 @@ header {
     }
 
     nav {
-        // DevMode
-        // border: 1px black solid;
 
         width: 45%;
         display: flex;
@@ -41,13 +35,14 @@ header {
 
         a {
             margin: 0 0.5rem;
+            border-bottom: 1px solid transparent;
             text-decoration: none;
             color: #333;
             font-size: 0.98em;
         }
 
         a:hover {
-            border-bottom: 1px black solid;
+            border-bottom-color: black;
         }
     }
 }
