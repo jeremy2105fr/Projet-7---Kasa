@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSousMenu } from './Sous_Menu'
 //Importation de gestion des sous-menu
 
 //importation images
@@ -9,8 +9,7 @@ import EtoileActive from '../style/assets/icons/star-active.svg'
 import EtoileInactif from '../style/assets/icons/star-inactif.svg'
 
 function Logement_Section() {
-    const [descriptionOuverte, setDescriptionOuverte] = useState(false)
-    const [equipementsOuverts, setEquipementsOuverts] = useState(false)
+    const { menuOuvert, basculerMenu, classeMenu } = useSousMenu()
 
   return (
     <section className='LogementSection'>
@@ -93,15 +92,15 @@ function Logement_Section() {
                         <button
                             type="button"
                             aria-label="Afficher ou masquer la description"
-                            aria-expanded={descriptionOuverte}
+                            aria-expanded={menuOuvert('description')}
                             aria-controls="description-logement"
-                            onClick={() => setDescriptionOuverte(!descriptionOuverte)}
+                            onClick={() => basculerMenu('description')}
                         >
                             <img src={Vector} alt="" />
                         </button>
                     </div>
 
-                    <div id="description-logement" className={`Description ${descriptionOuverte ? 'Ouvert' : 'Ferme'}`}>
+                    <div id="description-logement" className={`Description ${classeMenu('description')}`}>
                         <p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 ligne de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
                     </div>
                 </div>
@@ -112,14 +111,14 @@ function Logement_Section() {
                         <button
                             type="button"
                             aria-label="Afficher ou masquer les équipements"
-                            aria-expanded={equipementsOuverts}
+                            aria-expanded={menuOuvert('equipements')}
                             aria-controls="equipements-logement"
-                            onClick={() => setEquipementsOuverts(!equipementsOuverts)}
+                            onClick={() => basculerMenu('equipements')}
                         >
                             <img src={Vector} alt="" />
                         </button>
                     </div>
-                    <div id="equipements-logement" className={`Description ${equipementsOuverts ? 'Ouvert' : 'Ferme'}`}>
+                    <div id="equipements-logement" className={`Description ${classeMenu('equipements')}`}>
                         <ul>
                             <li>Climatisation</li>
                             <li>Wi-Fi</li>

@@ -5,6 +5,8 @@
         background-color: #FF6060;
         height: 30px;
         border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
 
         display: flex;
         justify-content: space-between;
@@ -19,6 +21,7 @@
         img {
             width: 16px;
             height: 9.14px;
+            transition: transform 0.2s ease;
         }
 
         button {
@@ -29,6 +32,10 @@
             border: 0;
             background: transparent;
             cursor: pointer;
+
+            &[aria-expanded='true'] img {
+                transform: rotate(180deg);
+            }
         }
     }
 
