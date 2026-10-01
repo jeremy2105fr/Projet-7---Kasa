@@ -1,5 +1,5 @@
-// Version Tablette
-$breakpoint-tablet: 768px;
+@use '../base/variables' as vars;
+@use '../base/mixins' as mixins;
 
 .SectionErreur {
     display: flex;
@@ -25,7 +25,7 @@ $breakpoint-tablet: 768px;
         gap: 0;
 
         p {
-            color: #FF6060;
+            color: vars.$color-primary;
             font-size: 18px;
             margin: 1px;
         }
@@ -41,7 +41,7 @@ $breakpoint-tablet: 768px;
     }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@include mixins.respond-up(vars.$breakpoint-tablet) {
     .SectionErreur {
         img {
             width: 60%;

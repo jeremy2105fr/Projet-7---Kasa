@@ -1,7 +1,5 @@
-// Version Tablette
-$breakpoint-tablet: 768px;
-// Version Ordinateur
-$breakpoint-desktop: 1024px;
+@use '../base/variables' as vars;
+@use '../base/mixins' as mixins;
 
 .LogementSection {
     display: flex;
@@ -26,7 +24,7 @@ $breakpoint-desktop: 1024px;
             position: relative;
 
             img {
-                border-radius: 10px;
+                border-radius: vars.$radius-card;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -123,7 +121,7 @@ $breakpoint-desktop: 1024px;
 
                     .Localisation1,
                     .Localisation2 {
-                        color: #FF6060;
+                        color: vars.$color-primary;
                         font-weight: 500;
                         font-size: 20px;
                         text-overflow: clip;
@@ -154,7 +152,7 @@ $breakpoint-desktop: 1024px;
                     }
 
                     .TagBox {
-                        background-color: #FF6060;
+                        background-color: vars.$color-primary;
                         color: white;
                         border-radius: 15px;
                         width: 100px;
@@ -216,7 +214,7 @@ $breakpoint-desktop: 1024px;
                         height: 42px;
 
                         p {
-                            color: #FF6060;
+                            color: vars.$color-primary;
                             font-weight: 500;
                             margin: 0;
                             text-align: right;
@@ -274,7 +272,7 @@ $breakpoint-desktop: 1024px;
     }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@include mixins.respond-up(vars.$breakpoint-desktop) {
 
 
     .LogementSection .LogementDescription {

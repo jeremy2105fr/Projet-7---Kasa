@@ -1,8 +1,5 @@
-// Version Tablette
-$breakpoint-tablet: 768px;
-// Version Ordinateur
-$breakpoint-desktop: 1024px;
-
+@use '../base/variables' as vars;
+@use '../base/mixins' as mixins;
 
 
 header {
@@ -55,7 +52,7 @@ header {
     }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@include mixins.respond-up(vars.$breakpoint-tablet) {
 
     header {
         width: 98%;

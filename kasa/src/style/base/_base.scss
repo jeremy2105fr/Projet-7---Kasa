@@ -1,7 +1,9 @@
 // Partie Mobile - base
+@use './variables' as vars;
+@use './mixins' as mixins;
 
 #root {
-    max-width: 767px;
+    max-width: vars.$breakpoint-tablet - 1px;
     background-color: rgb(124, 124, 224);
 
     display: flex;
@@ -11,9 +13,9 @@
 
 
 // Partie Tablette+
-@media (min-width: 768px) {
+@include mixins.respond-up(vars.$breakpoint-tablet) {
     #root {
-        max-width: 1023px;
+        max-width: vars.$breakpoint-desktop - 1px;
         padding: 0 8% 0 8%;
         background-color: rgb(233, 169, 169);
     }
@@ -21,7 +23,7 @@
 }
 
 // Partie Ordinateur+
-@media (min-width: 1024px) {
+@include mixins.respond-up(vars.$breakpoint-desktop) {
     #root {
         max-width: 100%;
         padding: 0 12% 0 12%;
