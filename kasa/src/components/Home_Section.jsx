@@ -5,22 +5,22 @@ function Home_Section() {
   return (
     <section className='HomeSection'>
       <div className="BoiteLocation">
-        <Link classname='Location_link' to="/logement">Titre de la location</Link>
+        <Link className='Location_link' to="/logement">Titre de la location</Link>
       </div>
       <div className="BoiteLocation">
-        <Link classname='Location_link' to="/logement">Titre de la location</Link>
+        <Link className='Location_link' to="/logement">Titre de la location</Link>
       </div>
       <div className="BoiteLocation">
-        <Link classname='Location_link' to="/logement">Titre de la location</Link>
+        <Link className='Location_link' to="/logement">Titre de la location</Link>
       </div>
       <div className="BoiteLocation">
-        <Link classname='Location_link' to="/logement">Titre de la location</Link>
+        <Link className='Location_link' to="/logement">Titre de la location</Link>
       </div>
       <div className="BoiteLocation">
-        <Link classname='Location_link' to="/logement">Titre de la location</Link>
+        <Link className='Location_link' to="/logement">Titre de la location</Link>
       </div>
       <div className="BoiteLocation">
-        <Link classname='Location_link' to="/logement">Titre de la location</Link>
+        <Link className='Location_link' to="/logement">Titre de la location</Link>
       </div>
     </section>
   )
